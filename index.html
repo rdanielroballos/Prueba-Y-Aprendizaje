@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demostración de HTML5 semántico y CSS moderno: Flexbox, Grid y diseño responsive">
+    <title>Demo Full Stack | HTML + CSS desde cero</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ============================================
+         HEADER: Cabecera del sitio
+         Contiene logo y navegación principal
+    ============================================= -->
+    <header class="header">
+        <div class="header__container">
+            <a href="#inicio" class="header__logo">
+                <span class="header__logo-icon">⚡</span>
+                DevLearn
+            </a>
+
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#flexbox" class="nav__link">Flexbox</a></li>
+                    <li class="nav__item"><a href="#grid" class="nav__link">Grid</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link nav__link--cta">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         MAIN: Contenido principal de la página
+    ============================================= -->
+    <main>
+
+        <!-- HERO: Sección de bienvenida (usa Flexbox) -->
+        <section class="hero" id="inicio">
+            <div class="hero__content">
+                <h1 class="hero__title">Aprendé <span class="hero__title-highlight">HTML y CSS</span> como un pro</h1>
+                <p class="hero__subtitle">
+                    Una guía visual para entender semántica, Flexbox, Grid y diseño responsive.
+                    Sin frameworks, sin atajos: solo los fundamentos que importan.
+                </p>
+                <div class="hero__actions">
+                    <a href="#flexbox" class="btn btn--primary">Empezar ahora</a>
+                    <a href="#grid" class="btn btn--secondary">Ver ejemplos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN FLEXBOX -->
+        <section class="section" id="flexbox">
+            <div class="container">
+                <h2 class="section__title">Flexbox: alineación en una dimensión</h2>
+                <p class="section__intro">
+                    Flexbox sirve para distribuir elementos en <strong>una sola dirección</strong>
+                    (fila o columna). Ideal para barras de navegación, tarjetas alineadas y cualquier
+                    layout lineal.
+                </p>
+
+                <!-- Demo de tarjetas con Flexbox -->
+                <div class="cards">
+                    <article class="card">
+                        <div class="card__icon">🎨</div>
+                        <h3 class="card__title">Diseño</h3>
+                        <p class="card__text">
+                            Tipografía, color y espaciado son la base de toda interfaz profesional.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__icon">📐</div>
+                        <h3 class="card__title">Estructura</h3>
+                        <p class="card__text">
+                            HTML semántico hace tu código más accesible y mejor posicionado en buscadores.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__icon">📱</div>
+                        <h3 class="card__title">Responsive</h3>
+                        <p class="card__text">
+                            Media queries adaptan tu sitio a celulares, tablets y monitores grandes.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN GRID -->
+        <section class="section section--alt" id="grid">
+            <div class="container">
+                <h2 class="section__title">CSS Grid: layouts en dos dimensiones</h2>
+                <p class="section__intro">
+                    Grid es ideal cuando necesitás controlar <strong>filas y columnas al mismo tiempo</strong>.
+                    Perfecto para galerías, dashboards y layouts complejos.
+                </p>
+
+                <!-- Galería con Grid -->
+                <div class="gallery">
+                    <div class="gallery__item gallery__item--big">
+                        <h3>HTML5</h3>
+                        <p>Estructura semántica</p>
+                    </div>
+                    <div class="gallery__item">
+                        <h3>CSS3</h3>
+                        <p>Estilos modernos</p>
+                    </div>
+                    <div class="gallery__item">
+                        <h3>Flexbox</h3>
+                        <p>Layout flexible</p>
+                    </div>
+                    <div class="gallery__item">
+                        <h3>Grid</h3>
+                        <p>Layout en 2D</p>
+                    </div>
+                    <div class="gallery__item gallery__item--wide">
+                        <h3>Responsive Design</h3>
+                        <p>Adaptación a cualquier dispositivo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section class="section" id="contacto">
+            <div class="container container--narrow">
+                <h2 class="section__title">¿Listo para el siguiente paso?</h2>
+                <p class="section__intro">
+                    Cuando domines esto, los frameworks como Bootstrap o Tailwind van a tener sentido,
+                    porque vas a entender qué hacen por debajo.
+                </p>
+
+                <form class="form" aria-label="Formulario de contacto">
+                    <div class="form__group">
+                        <label for="nombre" class="form__label">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email</label>
+                        <input type="email" id="email" name="email" class="form__input" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="mensaje" class="form__label">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" class="form__input form__input--textarea" rows="4" placeholder="Contame en qué andás aprendiendo..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         FOOTER: Pie de página
+    ============================================= -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">
+                Hecho con ❤️ para aprender. <br>
+                <small>HTML + CSS puro, sin frameworks.</small>
+            </p>
+            <ul class="footer__links">
+                <li><a href="#inicio" class="footer__link">Inicio</a></li>
+                <li><a href="#flexbox" class="footer__link">Flexbox</a></li>
+                <li><a href="#grid" class="footer__link">Grid</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
